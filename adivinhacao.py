@@ -3,7 +3,7 @@ from random import randint
 
 def jogar():
     print("*"*32)
-    print("Bem Vindo ao jogo de Advinhação!")
+    print("Bem Vindo ao jogo de Adivinhação!")
     print("*"*32)
 
     numero_secreto = randint(1, 100)
@@ -50,3 +50,7 @@ def jogar():
 
     print("O número secreto era: {:3d}".format(numero_secreto))
     print("Fim do jogo")
+
+
+if (__name__ == "__main__"):
+    jogar()
