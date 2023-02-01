@@ -40,7 +40,7 @@ def imprime_mensagem_abertura():
 
 
 def carrega_palavra_secreta():
-    arquivo = open("palavras.txt", "r")
+    arquivo = open("palavras.txt", "r", encoding="utf-8")
     palavras = []
 
     for linha in arquivo:
