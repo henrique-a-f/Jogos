@@ -40,14 +40,16 @@ def imprime_mensagem_abertura():
 
 
 def carrega_palavra_secreta():
-    arquivo = open("palavras.txt", "r", encoding="utf-8")
-    palavras = []
+    # arquivo = open("palavras.txt", "r", encoding="utf-8")
+    with open("palavras.txt", encoding="utf-8") as arquivo:
+        palavras = []
 
-    for linha in arquivo:
-        linha = linha.strip()
-        palavras.append(linha)
+        for linha in arquivo:
+            linha = linha.strip()
+            palavras.append(linha)
 
-    arquivo.close()
+    # palavras = []
+    # arquivo.close()
 
     numero = random.randrange(0, len(palavras))
     palavra_secreta = palavras[numero].upper()
